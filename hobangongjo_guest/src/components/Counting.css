@@ -1,0 +1,56 @@
+.Counting {
+  padding: 30px 20px;
+}
+.Counting > section {
+  padding: 10px 0px;
+}
+.Counting > section > div {
+  font-size: 20px;
+  color: grey;
+  font-weight: bold;
+}
+.Counting .info > div {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  color: grey;
+  font-weight: bold;
+}
+
+.Counting .name .name_input {
+  width: 100%;
+  border: 0.5px solid rgb(236, 236, 236);
+  padding: 10px 0px;
+}
+.Counting .install_info > select {
+  width: 100%;
+  height: 30px;
+}
+.Counting .counting_content .counting_content_text {
+  width: 100%;
+  min-height: 250px;
+  resize: vertical;
+  border: 0.5px solid rgb(236, 236, 236);
+}
+.Counting .btn {
+  display: flex;
+  justify-content: center;
+}
+
+.Counting .install_info .select {
+  border: 0.5px solid rgb(236, 236, 236);
+  padding: 20px 0px;
+}
+.Counting .phone_number .number_input {
+  display: flex;
+}
+.Counting .phone_number .number_input > input {
+  border: 1px solid rgb(236, 236, 236);
+  padding: 10px 0px;
+  flex: 1;
+}
+.Counting .phone_number .number_input > span {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px 10px;
+}

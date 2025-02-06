@@ -1,0 +1,50 @@
+.Header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid grey;
+}
+.Header .logo .logo_img {
+  width: 100px;
+}
+.Header .logo div {
+  font-size: 25px;
+  font-weight: bold;
+}
+.Header .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+}
+.Header .info img {
+  width: 60px;
+}
+.Header .info .info_text {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.Header .info .info_text {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.Header .info .info_text .phone_number_text {
+  font-size: 30px;
+  font-weight: bold;
+  color: royalblue;
+}
+
+.Header .info .location_info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 20px;
+}
+.Header .info .location_info div {
+  font-size: 20px;
+  font-weight: bold;
+}

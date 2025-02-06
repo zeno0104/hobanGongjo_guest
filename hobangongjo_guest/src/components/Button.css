@@ -1,0 +1,12 @@
+.btn {
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 20px 10px;
+  cursor: pointer;
+}
+.btn_POSITIVE {
+  background-color: cornflowerblue;
+  color: white;
+}

@@ -1,0 +1,24 @@
+.SelectMenu .tabContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.SelectMenu .tab {
+  border: 1px solid rgb(236, 236, 236);
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 5px;
+}
+
+.SelectMenu .tabContainer .tab_introduce {
+  background-color: royalblue;
+  color: white;
+  font-weight: bold;
+}
+.SelectMenu .tabContainer .tab_counting {
+  background-color: royalblue;
+  color: white;
+  font-weight: bold;
+}
