@@ -5,16 +5,18 @@
   padding: 10px 0px;
 }
 .Counting > section > div {
-  font-size: 20px;
+  font-size: 16px;
   color: grey;
   font-weight: bold;
+  white-space: nowrap;
 }
 .Counting .info > div {
   display: flex;
-  font-size: 20px;
+  font-size: 16px;
   justify-content: center;
   color: grey;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .Counting .name .name_input {
@@ -43,14 +45,19 @@
 }
 .Counting .phone_number .number_input {
   display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 .Counting .phone_number .number_input > input {
   border: 1px solid rgb(236, 236, 236);
   padding: 10px 0px;
   flex: 1;
+  /* 입력 필드가 가능한 공간을 차지하도록 설정 */
+  min-width: 0;
+  /* 최소 너비를 0으로 설정하여 줄어들 수 있도록 함 */
 }
 .Counting .phone_number .number_input > span {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   margin: 0px 10px;
 }
