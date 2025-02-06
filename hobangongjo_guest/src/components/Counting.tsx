@@ -1,4 +1,3 @@
-// import React, { useState } from "react";
 import "./Counting.css";
 import { Starlisk } from "./Starlisk";
 import { Button } from "./Button";
