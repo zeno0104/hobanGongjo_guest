@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./SelectMenu.css";
 import { Introduce } from "./Introduce";
 import { Counting } from "./Counting";
