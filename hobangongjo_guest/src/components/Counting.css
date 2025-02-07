@@ -11,9 +11,14 @@
   font-weight: bold;
   white-space: nowrap;
 }
+@media screen and (min-width: 415px) and (max-width: 700px) {
+  .Counting > section > div {
+    font-size: 15px;
+  }
+}
 @media screen and (min-width: 767px) {
   .Counting > section > div {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 .Counting .info > div {
@@ -24,13 +29,19 @@
   font-weight: bold;
   white-space: nowrap;
 }
+@media screen and (min-width: 415px) and (max-width: 700px) {
+  .Counting .info > div {
+    font-size: 15px;
+  }
+}
 @media screen and (min-width: 767px) {
   .Counting .info > div {
     font-size: 20px;
   }
 }
+
 .Counting .name .name_input {
-  width: 98.2%;
+  width: 97.7%;
   border: 1px solid rgb(130, 130, 130);
   border-radius: 5px;
   padding: 10px 5px;
@@ -40,12 +51,11 @@
   height: 30px;
 }
 .Counting .counting_content .counting_content_text {
-  width: 100%;
+  width: 98.9%;
   min-height: 250px;
   resize: vertical;
   border: 1px solid rgb(130, 130, 130);
   border-radius: 5px;
-  padding: 10px 5px;
 }
 .Counting .btn {
   display: flex;
@@ -73,11 +83,7 @@
   min-width: 0;
   /* 최소 너비를 0으로 설정하여 줄어들 수 있도록 함 */
 }
-.Counting .phone_number .number_input > span {
-  font-size: 15px;
-  font-weight: bold;
-  margin: 0px 10px;
-}
+
 .checkbox {
   display: flex;
   align-items: center;
