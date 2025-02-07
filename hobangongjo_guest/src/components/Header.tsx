@@ -20,7 +20,7 @@ export const Header = () => {
           </a>
         </div>
         <div className="location_info">
-          <div>강북·도봉·노원·의정부·남양주 전문!</div>
+          <div>강북·도봉·노원·의정부·남양주</div>
           <div>새 제품/이전 설치</div>
         </div>
       </section>

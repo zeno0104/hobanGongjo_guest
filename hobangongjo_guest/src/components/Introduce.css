@@ -6,7 +6,8 @@
   align-items: center;
 }
 .Introduce .title {
-  font-size: 30px;
+  font-size: calc(50% + 20px);
+
   font-weight: bold;
 }
 .Introduce .text {
@@ -16,10 +17,7 @@
   margin: 20px;
 }
 .Introduce .text > div {
-  font-size: 15px;
+  font-size: calc(50% + 7px);
+
   font-weight: 600;
-}
-.Introduce .last_text {
-  font-size: 25px;
-  font-weight: bold;
 }

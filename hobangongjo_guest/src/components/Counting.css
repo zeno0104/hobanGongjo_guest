@@ -5,14 +5,15 @@
   padding: 10px 0px;
 }
 .Counting > section > div {
-  font-size: 18px;
+  font-size: calc(50% + 10px);
   color: grey;
   font-weight: bold;
   white-space: nowrap;
 }
 .Counting .info > div {
   display: flex;
-  font-size: 18px;
+  font-size: calc(50% + 14px);
+
   justify-content: center;
   color: grey;
   font-weight: bold;
@@ -57,7 +58,8 @@
   /* 최소 너비를 0으로 설정하여 줄어들 수 있도록 함 */
 }
 .Counting .phone_number .number_input > span {
-  font-size: 16px;
+  font-size: calc(50% + 5px);
+
   font-weight: bold;
   margin: 0px 10px;
 }

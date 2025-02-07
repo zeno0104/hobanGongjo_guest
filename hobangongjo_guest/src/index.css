@@ -6,6 +6,11 @@
   font-style: normal;
 }
 
+html {
+  -webkit-text-size-adjust: 100%; /* 기본 텍스트 크기 조정 비율 */
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 html,
 body {
   margin: 0px;
@@ -13,7 +18,7 @@ body {
 }
 #root {
   background-color: white;
-  max-width: 600px;
+  /* max-width: 600px; */
   width: 100%;
   margin: 0 auto;
   min-height: 100vh;
