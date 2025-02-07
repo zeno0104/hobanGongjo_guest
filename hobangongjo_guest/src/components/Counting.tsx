@@ -166,8 +166,17 @@ export const Counting = () => {
         <div className="checkBox">
           {airType.map((item) => (
             <div className="checkbox" key={item.id}>
-              <input type="checkbox" id={item.value} onChange={selectHandler} />
-              <label htmlFor={item.value}>{item.name}</label>
+              <div>
+                <input
+                  type="checkbox"
+                  id={item.value}
+                  className="checkBoxInput"
+                  onChange={selectHandler}
+                />
+              </div>
+              <div>
+                <label htmlFor={item.value}>{item.name}</label>
+              </div>
             </div>
           ))}
         </div>

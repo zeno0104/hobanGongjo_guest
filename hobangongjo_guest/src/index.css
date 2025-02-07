@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "ghanachoco";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   margin: 0px;
@@ -11,4 +19,7 @@ body {
   min-height: 100vh;
   height: 100%;
   box-shadow: rgba(100, 100, 100, 0.2) 0px 0px 29px 0px;
+}
+body * {
+  font-family: "ghanachoco";
 }

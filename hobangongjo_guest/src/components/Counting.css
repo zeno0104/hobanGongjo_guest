@@ -5,14 +5,14 @@
   padding: 10px 0px;
 }
 .Counting > section > div {
-  font-size: 16px;
+  font-size: 18px;
   color: grey;
   font-weight: bold;
   white-space: nowrap;
 }
 .Counting .info > div {
   display: flex;
-  font-size: 16px;
+  font-size: 18px;
   justify-content: center;
   color: grey;
   font-weight: bold;
@@ -60,4 +60,13 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0px 10px;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkBoxInput {
+  width: 2rem;
+  height: 2rem;
 }
