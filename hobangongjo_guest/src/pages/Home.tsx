@@ -1,11 +1,9 @@
-import { Header } from "../components/Header";
-import { SelectMenu } from "../components/SelectMenu";
+import { Introduce } from "../components/Introduce";
 
 export const Home = () => {
   return (
     <div>
-      <Header />
-      <SelectMenu />
+      <Introduce />
     </div>
   );
 };
