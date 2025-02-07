@@ -3,24 +3,37 @@
 }
 .Counting > section {
   padding: 10px 0px;
+  margin-bottom: 10px;
 }
 .Counting > section > div {
-  font-size: 12px;
+  font-size: 15px;
   color: black;
   font-weight: bold;
+  white-space: nowrap;
+}
+@media screen and (min-width: 767px) {
+  .Counting > section > div {
+    font-size: 20px;
+  }
 }
 .Counting .info > div {
   display: flex;
-  font-size: 12px;
+  font-size: 15px;
   justify-content: center;
   color: grey;
   font-weight: bold;
+  white-space: nowrap;
 }
-
+@media screen and (min-width: 767px) {
+  .Counting .info > div {
+    font-size: 20px;
+  }
+}
 .Counting .name .name_input {
-  width: 100%;
-  border: 0.5px solid rgb(236, 236, 236);
-  padding: 10px 0px;
+  width: 98.2%;
+  border: 1px solid rgb(130, 130, 130);
+  border-radius: 5px;
+  padding: 10px 5px;
 }
 .Counting .install_info > select {
   width: 100%;
@@ -30,7 +43,9 @@
   width: 100%;
   min-height: 250px;
   resize: vertical;
-  border: 0.5px solid rgb(236, 236, 236);
+  border: 1px solid rgb(130, 130, 130);
+  border-radius: 5px;
+  padding: 10px 5px;
 }
 .Counting .btn {
   display: flex;
@@ -38,23 +53,28 @@
 }
 
 .Counting .install_info .select {
-  border: 0.5px solid rgb(236, 236, 236);
-  padding: 20px 0px;
+  border: 1px solid rgb(130, 130, 130);
+  border-radius: 5px;
+  padding: 10px 5px;
+  height: 50px;
+  font-size: 15px;
 }
 .Counting .phone_number .number_input {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
 }
 .Counting .phone_number .number_input > input {
-  border: 1px solid rgb(236, 236, 236);
-  padding: 10px 0px;
+  border: 1px solid rgb(130, 130, 130);
+  border-radius: 5px;
+  padding: 10px 5px;
   flex: 1;
   /* 입력 필드가 가능한 공간을 차지하도록 설정 */
   min-width: 0;
   /* 최소 너비를 0으로 설정하여 줄어들 수 있도록 함 */
 }
 .Counting .phone_number .number_input > span {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: bold;
   margin: 0px 10px;
 }

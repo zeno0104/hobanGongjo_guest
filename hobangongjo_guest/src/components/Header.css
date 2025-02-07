@@ -8,7 +8,7 @@
   width: 100px;
 }
 .Header .logo div {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 .Header .info {
@@ -27,14 +27,23 @@
   align-items: center;
 }
 .Header .info .info_text {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
 }
-
+@media screen and (min-width: 767px) {
+  .Header .info .info_text {
+    font-size: 15px;
+  }
+}
 .Header .info .info_text .phone_number_text {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: bold;
   color: royalblue;
+}
+@media screen and (min-width: 767px) {
+  .Header .info .info_text .phone_number_text {
+    font-size: 25px;
+  }
 }
 
 .Header .info .location_info {
@@ -44,8 +53,13 @@
   margin-left: 20px;
 }
 .Header .info .location_info div {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
+}
+@media screen and (min-width: 767px) {
+  .Header .info .location_info div {
+    font-size: 18px;
+  }
 }
 .Header .info .info_text a {
   text-decoration: none;

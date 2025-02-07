@@ -46,12 +46,17 @@ export const Counting = () => {
 
   const selectHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const isChecked = e.target.checked;
-    const selectedName = e.target.nextSibling?.textContent;
+    const labels = e.target.labels;
 
-    const updatedType =
-      isChecked && selectedName
-        ? [...guestInfo.type, selectedName]
-        : guestInfo.type.filter((item) => item !== selectedName);
+    // labels가 null이 아닐 때만 접근
+    const selectedName =
+      labels && labels.length > 0 ? labels[0].textContent : null;
+
+    if (!selectedName) return; // selectedName이 null인 경우 함수 종료
+
+    const updatedType = isChecked
+      ? [...guestInfo.type, selectedName]
+      : guestInfo.type.filter((item) => item !== selectedName);
 
     setGuestInfo({ ...guestInfo, type: updatedType });
   };
@@ -64,7 +69,6 @@ export const Counting = () => {
   const phoneNumRef = useRef<HTMLInputElement>(null);
   const installLocRef = useRef<HTMLSelectElement>(null);
   const typeRef = useRef<HTMLDivElement>(null);
-
   const onSubmit = async () => {
     if (!guestInfo.name) {
       nameRef.current?.focus();
@@ -105,6 +109,7 @@ export const Counting = () => {
       }
     }
   };
+  console.log(guestInfo);
 
   return (
     <div className="Counting">
@@ -143,14 +148,15 @@ export const Counting = () => {
         </div>
         <select
           className="select"
-          value={guestInfo.installLocation}
           onChange={installLocationHandler}
           ref={installLocRef}
         >
           <option value="장소 선택" defaultValue={"장소 선택"}>
             장소 선택
           </option>
-          <option value="가정집">가정집</option>
+          <option selected value="가정집">
+            가정집
+          </option>
           <option value="사무실 / 관공서">사무실 / 관공서</option>
           <option value="상가 / 상업시설 / 의료시설">
             상가 / 상업시설 / 의료시설

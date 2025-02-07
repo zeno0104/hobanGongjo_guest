@@ -6,8 +6,13 @@
   align-items: center;
 }
 .Introduce .title {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: bold;
+}
+@media screen and (min-width: 767px) {
+  .Introduce .title {
+    font-size: 25px;
+  }
 }
 .Introduce .text {
   display: flex;
@@ -16,6 +21,12 @@
   margin: 20px;
 }
 .Introduce .text > div {
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 600;
+}
+
+@media screen and (min-width: 767px) {
+  .Introduce .text > div {
+    font-size: 20px;
+  }
 }
