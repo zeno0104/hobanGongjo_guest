@@ -8,8 +8,7 @@
   width: 100px;
 }
 .Header .logo div {
-  font-size: calc(50% + 15px);
-
+  font-size: 20px;
   font-weight: bold;
 }
 .Header .info {
@@ -26,21 +25,16 @@
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  flex-wrap: nowrap;
 }
 .Header .info .info_text {
-  font-size: calc(50% + 5px);
-
+  font-size: 10px;
   font-weight: bold;
 }
 
 .Header .info .info_text .phone_number_text {
-  font-size: calc(50% + 15px);
-
+  font-size: 14px;
   font-weight: bold;
   color: royalblue;
-  /* flex-wrap: nowrap; */
-  white-space: nowrap;
 }
 
 .Header .info .location_info {
@@ -48,11 +42,9 @@
   flex-direction: column;
   text-align: center;
   margin-left: 20px;
-  white-space: nowrap;
 }
 .Header .info .location_info div {
-  font-size: calc(50% + 6px);
-
+  font-size: 12px;
   font-weight: bold;
 }
 .Header .info .info_text a {

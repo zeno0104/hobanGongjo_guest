@@ -6,11 +6,6 @@
   font-style: normal;
 }
 
-html {
-  -webkit-text-size-adjust: 100%; /* 기본 텍스트 크기 조정 비율 */
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
 html,
 body {
   margin: 0px;
@@ -18,12 +13,8 @@ body {
 }
 #root {
   background-color: white;
-  /* max-width: 600px; */
   width: 100%;
-  margin: 0 auto;
-  min-height: 100vh;
   height: 100%;
-  box-shadow: rgba(100, 100, 100, 0.2) 0px 0px 29px 0px;
 }
 body * {
   font-family: "ghanachoco";

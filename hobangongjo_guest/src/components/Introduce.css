@@ -6,8 +6,7 @@
   align-items: center;
 }
 .Introduce .title {
-  font-size: calc(50% + 20px);
-
+  font-size: 14px;
   font-weight: bold;
 }
 .Introduce .text {
@@ -17,7 +16,6 @@
   margin: 20px;
 }
 .Introduce .text > div {
-  font-size: calc(50% + 7px);
-
+  font-size: 10px;
   font-weight: 600;
 }
