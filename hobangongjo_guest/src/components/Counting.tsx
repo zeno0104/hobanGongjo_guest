@@ -9,21 +9,24 @@ import { CounselStateContext } from "../App";
 type CountingData = {
   name: string;
   phone_number: string;
+  install_type: string;
+  region: string;
   installLocation: string;
   type: string[];
   content: string;
 };
 
 const airType = [
-  { id: 1, value: "chunjang", name: "천장형" },
-  { id: 2, value: "stand", name: "스탠드" },
-  { id: 3, value: "buck", name: "벽걸이" },
+  { id: 1, value: "stand", name: "스탠드" },
+  { id: 2, value: "buck", name: "벽걸이" },
 ];
 
 export const Counting = () => {
   const [guestInfo, setGuestInfo] = useState<CountingData>({
     name: "",
     phone_number: "",
+    install_type: "",
+    region: "",
     installLocation: "",
     type: [],
     content: "",
@@ -43,7 +46,12 @@ export const Counting = () => {
   const installLocationHandler = (e: ChangeEvent<HTMLSelectElement>) => {
     setGuestInfo({ ...guestInfo, installLocation: e.target.value });
   };
-
+  const regionHandler = (e: ChangeEvent<HTMLSelectElement>) => {
+    setGuestInfo({ ...guestInfo, region: e.target.value });
+  };
+  const installTypeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
+    setGuestInfo({ ...guestInfo, install_type: e.target.value });
+  };
   const selectHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const isChecked = e.target.checked;
     const labels = e.target.labels;
@@ -67,6 +75,8 @@ export const Counting = () => {
 
   const nameRef = useRef<HTMLInputElement>(null);
   const phoneNumRef = useRef<HTMLInputElement>(null);
+  const regionRef = useRef<HTMLInputElement>(null);
+  const installTypeRef = useRef<HTMLInputElement>(null);
   const installLocRef = useRef<HTMLSelectElement>(null);
   const typeRef = useRef<HTMLDivElement>(null);
   const onSubmit = async () => {
@@ -75,6 +85,9 @@ export const Counting = () => {
       return;
     } else if (!guestInfo.phone_number) {
       phoneNumRef.current?.focus();
+      return;
+    } else if (!guestInfo.region) {
+      regionRef.current?.focus();
       return;
     } else if (!guestInfo.installLocation) {
       installLocRef.current?.focus();
@@ -91,10 +104,14 @@ export const Counting = () => {
         .insert([
           {
             name: guestInfo.name,
+            region: guestInfo.region,
+            install_type: guestInfo.install_type,
             phone_number: guestInfo.phone_number,
             install_location: guestInfo.installLocation,
             type: guestInfo.type,
             content: guestInfo.content,
+            is_counsel_completed: false,
+            is_reserve_completed: false,
           },
         ])
         .select();
@@ -144,6 +161,37 @@ export const Counting = () => {
       </section>
       <section className="install_info">
         <div>
+          중고 or 새제품 설치 <Starlisk />
+        </div>
+        <select
+          className="select"
+          onChange={installTypeHandler}
+          ref={installTypeRef}
+        >
+          <option
+            selected
+            value="장소 선택"
+            defaultValue={"장소 선택"}
+          ></option>
+          <option value="이전설치">이전설치</option>
+          <option value="새제품">새제품</option>
+        </select>
+      </section>
+      <section className="install_info">
+        <div>
+          지역을 선택해주세요. <Starlisk />
+        </div>
+        <select className="select" onChange={regionHandler} ref={regionRef}>
+          <option value="장소 선택" defaultValue={"장소 선택"}></option>
+          <option value="강북">강북</option>
+          <option value="도봉">도봉</option>
+          <option value="노원">노원</option>
+          <option value="의정부">의정부</option>
+          <option value="남양주">남양주</option>
+        </select>
+      </section>
+      <section className="install_info">
+        <div>
           설치하실 장소를 선택해주세요. <Starlisk />
         </div>
         <select
@@ -151,12 +199,8 @@ export const Counting = () => {
           onChange={installLocationHandler}
           ref={installLocRef}
         >
-          <option value="장소 선택" defaultValue={"장소 선택"}>
-            장소 선택
-          </option>
-          <option selected value="가정집">
-            가정집
-          </option>
+          <option value="장소 선택" defaultValue={"장소 선택"}></option>
+          <option value="가정집">가정집</option>
           <option value="사무실 / 관공서">사무실 / 관공서</option>
           <option value="상가 / 상업시설 / 의료시설">
             상가 / 상업시설 / 의료시설
@@ -188,9 +232,7 @@ export const Counting = () => {
         </div>
       </section>
       <section className="counting_content">
-        <div>
-          문의 내용 <Starlisk />
-        </div>
+        <div>문의 내용</div>
         <textarea className="counting_content_text" onChange={contentHandler} />
       </section>
       <section className="btn">
