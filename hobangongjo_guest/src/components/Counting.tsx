@@ -75,8 +75,8 @@ export const Counting = () => {
 
   const nameRef = useRef<HTMLInputElement>(null);
   const phoneNumRef = useRef<HTMLInputElement>(null);
-  const regionRef = useRef<HTMLInputElement>(null);
-  const installTypeRef = useRef<HTMLInputElement>(null);
+  const regionRef = useRef<HTMLSelectElement>(null);
+  const installTypeRef = useRef<HTMLSelectElement>(null);
   const installLocRef = useRef<HTMLSelectElement>(null);
   const typeRef = useRef<HTMLDivElement>(null);
   const onSubmit = async () => {
