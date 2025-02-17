@@ -14,8 +14,7 @@ type CountingData = {
   installLocation: string;
   type: string[];
   content: string;
-  installConfirm: boolean;
-  installFinished: boolean;
+  status: string;
 };
 
 const airType = [
@@ -32,8 +31,7 @@ export const Counting = () => {
     installLocation: "",
     type: [],
     content: "",
-    installConfirm: false,
-    installFinished: false,
+    status: "",
   });
   const context = useContext(CounselStateContext);
   const setSelectMenu = context?.setSelectMenu;
@@ -114,10 +112,7 @@ export const Counting = () => {
             install_location: guestInfo.installLocation,
             type: guestInfo.type,
             content: guestInfo.content,
-            is_counsel_completed: false,
-            is_reserve_completed: false,
-            installConfirm: false,
-            installFinished: false,
+            status: "counselIncompleted",
           },
         ])
         .select();
