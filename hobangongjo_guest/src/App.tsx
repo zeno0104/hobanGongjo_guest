@@ -13,6 +13,7 @@ type CounselStateContextType = {
 };
 
 // Context 생성 시 타입 정의
+// eslint-disable-next-line react-refresh/only-export-components
 export const CounselStateContext = createContext<
   CounselStateContextType | undefined
 >(undefined);
