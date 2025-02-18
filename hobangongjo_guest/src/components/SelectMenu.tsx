@@ -11,20 +11,17 @@ export const SelectMenu = () => {
     throw new Error("SelectMenu must be used within a CounselStateProvider");
   }
 
-  const { selectMenu, setSelectMenu } = context;
+  const { selectMenu } = context;
   const nav = useNavigate();
 
   const introduceTabHandler = () => {
-    setSelectMenu("introduce");
     nav("/");
   };
 
   const countingTabHandler = () => {
-    setSelectMenu("counting");
     nav("/counsel");
   };
   const counselListHandler = () => {
-    setSelectMenu("counselList");
     nav("/list");
   };
 
@@ -38,15 +35,13 @@ export const SelectMenu = () => {
           회사 소개
         </div>
         <div
-          className={`tab tab_${selectMenu === "counting" ? "counting" : ""}`}
+          className={`tab tab_${selectMenu === "counsel" ? "counting" : ""}`}
           onClick={countingTabHandler}
         >
           상담 신청
         </div>
         <div
-          className={`tab tab_${
-            selectMenu === "counselList" ? "counselList" : ""
-          }`}
+          className={`tab tab_${selectMenu === "list" ? "counselList" : ""}`}
           onClick={counselListHandler}
         >
           상담 조회

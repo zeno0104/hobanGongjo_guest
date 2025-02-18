@@ -26,21 +26,16 @@ export const List = () => {
   if (!context) {
     throw new Error("CounselStateContext가 정의되지 않았습니다."); // ✅ 예외 처리 추가
   }
-  const { setSelectMenu } = context;
 
   const cancelHandler = async (id: number) => {
     if (window.confirm("상담을 취소하시겠습니까?")) {
-      const { data, error } = await supabase
-        .from("guest")
-        .delete()
-        .eq("id", id);
+      const { error } = await supabase.from("guest").delete().eq("id", id);
       if (error) {
         console.error(error);
         return;
       }
 
       window.alert("상담을 취소하였습니다.");
-      console.log("삭제된 데이터:", data);
 
       const listValue = localStorage.getItem("counselList");
       if (listValue) {
@@ -49,7 +44,6 @@ export const List = () => {
         localStorage.setItem("counselList", JSON.stringify(filteredData));
 
         setList(filteredData);
-        setSelectMenu("introduce");
       }
 
       nav("/", { replace: true });

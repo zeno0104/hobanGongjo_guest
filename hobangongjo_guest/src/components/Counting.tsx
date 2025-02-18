@@ -37,7 +37,6 @@ export const Counting = () => {
   if (!context) {
     throw new Error("CounselStateContext가 정의되지 않았습니다."); // ✅ 예외 처리 추가
   }
-  const { setSelectMenu } = context;
 
   const nav = useNavigate();
 
@@ -131,15 +130,10 @@ export const Counting = () => {
 
         // ✅ localStorage에 저장
         localStorage.setItem("counselList", JSON.stringify(newData));
-        if (setSelectMenu) {
-          setSelectMenu("introduce");
-        }
         nav("/", { replace: true });
       }
     }
   };
-  console.log(localStorage.getItem("counselList"));
-
   return (
     <div className="Counting">
       <section className="info">
