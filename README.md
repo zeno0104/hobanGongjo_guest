@@ -25,7 +25,6 @@
 # 🔥기능
 | 회사소개 | 간편 상담 신청 |
 |---|---|
-| <p align="center"><img src="https://github.com/user-attachments/assets/f633681b-1e37-44fc-9a05-c4c793d4741d" width="70%"/></p> | <p align="center"><img src="https://github.com/user-attachments/assets/058083c0-7586-4738-81a8-05f797902078" width="70%" /></p> |
-
-# 🌱추후 개발 할 내용
-- 상담 예약 취소 기능
+| <p align="center"><img src="https://github.com/user-attachments/assets/0a97f8d3-2ff5-47f2-8a23-34bcfee57259" width="70%"/></p> | <p align="center"><img src="https://github.com/user-attachments/assets/058083c0-7586-4738-81a8-05f797902078" width="70%" /></p> |
+| 상담 조회 | 
+| <p align="center"><img src="https://github.com/user-attachments/assets/7f6e29fd-4f76-48a7-a9f5-22353e2de0f2" width="70%"/></p> |
