@@ -23,8 +23,10 @@ export const SelectMenu = () => {
     setSelectMenu("counting");
     nav("/counsel");
   };
-
-  console.log(selectMenu);
+  const counselListHandler = () => {
+    setSelectMenu("counselList");
+    nav("/list");
+  };
 
   return (
     <div className="SelectMenu">
@@ -40,6 +42,14 @@ export const SelectMenu = () => {
           onClick={countingTabHandler}
         >
           간편 상담 신청
+        </div>
+        <div
+          className={`tab tab_${
+            selectMenu === "counselList" ? "counselList" : ""
+          }`}
+          onClick={counselListHandler}
+        >
+          상담 내역 조회/취소
         </div>
       </div>
     </div>

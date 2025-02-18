@@ -34,7 +34,11 @@ export const Counting = () => {
     status: "",
   });
   const context = useContext(CounselStateContext);
-  const setSelectMenu = context?.setSelectMenu;
+  if (!context) {
+    throw new Error("CounselStateContext가 정의되지 않았습니다."); // ✅ 예외 처리 추가
+  }
+  const { setSelectMenu } = context;
+
   const nav = useNavigate();
 
   const nameHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -74,7 +78,6 @@ export const Counting = () => {
   const contentHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setGuestInfo({ ...guestInfo, content: e.target.value });
   };
-
   const nameRef = useRef<HTMLInputElement>(null);
   const phoneNumRef = useRef<HTMLInputElement>(null);
   const regionRef = useRef<HTMLSelectElement>(null);
@@ -100,8 +103,7 @@ export const Counting = () => {
     }
 
     if (window.confirm("상담 신청을 하시겠습니까?")) {
-      console.log(guestInfo);
-      const { error } = await supabase
+      const { data, error } = await supabase
         .from("guest")
         .insert([
           {
@@ -120,6 +122,15 @@ export const Counting = () => {
         window.alert(error);
       } else {
         window.alert("상담 신청이 완료되었습니다.");
+        const existingData = JSON.parse(
+          localStorage.getItem("counselList") || "[]"
+        );
+
+        // ✅ 새로운 상담 내역 추가
+        const newData = [...existingData, data[0]];
+
+        // ✅ localStorage에 저장
+        localStorage.setItem("counselList", JSON.stringify(newData));
         if (setSelectMenu) {
           setSelectMenu("introduce");
         }
@@ -127,7 +138,7 @@ export const Counting = () => {
       }
     }
   };
-  console.log(guestInfo);
+  console.log(localStorage.getItem("counselList"));
 
   return (
     <div className="Counting">
@@ -169,11 +180,7 @@ export const Counting = () => {
           onChange={installTypeHandler}
           ref={installTypeRef}
         >
-          <option
-            selected
-            value="장소 선택"
-            defaultValue={"장소 선택"}
-          ></option>
+          <option value="장소 선택" defaultValue={""}></option>
           <option value="이전설치">이전설치</option>
           <option value="새제품">새제품</option>
         </select>
@@ -183,7 +190,7 @@ export const Counting = () => {
           지역을 선택해주세요. <Starlisk />
         </div>
         <select className="select" onChange={regionHandler} ref={regionRef}>
-          <option value="장소 선택" defaultValue={"장소 선택"}></option>
+          <option value="장소 선택" defaultValue={""}></option>
           <option value="강북">강북</option>
           <option value="도봉">도봉</option>
           <option value="노원">노원</option>
@@ -200,7 +207,7 @@ export const Counting = () => {
           onChange={installLocationHandler}
           ref={installLocRef}
         >
-          <option value="장소 선택" defaultValue={"장소 선택"}></option>
+          <option value="장소 선택" defaultValue={""}></option>
           <option value="가정집">가정집</option>
           <option value="사무실 / 관공서">사무실 / 관공서</option>
           <option value="상가 / 상업시설 / 의료시설">

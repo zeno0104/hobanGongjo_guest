@@ -1,10 +1,11 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
 import { Home } from "./pages/Home";
 import { Counsel } from "./pages/Counsel";
 import { Header } from "./components/Header";
 import { SelectMenu } from "./components/SelectMenu";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
+import { List } from "./pages/List";
 
 // Context의 타입 정의
 type CounselStateContextType = {
@@ -12,14 +13,17 @@ type CounselStateContextType = {
   setSelectMenu: (menu: string) => void;
 };
 
-// Context 생성 시 타입 정의
-// eslint-disable-next-line react-refresh/only-export-components
+// Context 생성
 export const CounselStateContext = createContext<
   CounselStateContextType | undefined
 >(undefined);
 
 function App() {
   const [selectMenu, setSelectMenu] = useState<string>("introduce");
+  const nav = useNavigate();
+  useEffect(() => {
+    nav("/");
+  }, []);
 
   return (
     <>
@@ -29,6 +33,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/counsel" element={<Counsel />} />
+          <Route path="/list" element={<List />} />
         </Routes>
       </CounselStateContext.Provider>
     </>

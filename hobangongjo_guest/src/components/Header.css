@@ -38,7 +38,7 @@
 .Header .info .info_text .phone_number_text {
   font-size: 16px;
   font-weight: bold;
-  color: royalblue;
+  color: rgb(64, 105, 225);
 }
 @media screen and (min-width: 767px) {
   .Header .info .info_text .phone_number_text {
