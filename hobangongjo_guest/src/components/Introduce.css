@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .Introduce .title {
   font-size: 20px;
@@ -19,14 +20,13 @@
   flex-direction: column;
   align-items: center;
   margin: 20px;
-}
-.Introduce .text > div {
-  font-size: 15px;
+  color: dimgray;
+  font-size: 14px;
   font-weight: 600;
 }
 
 @media screen and (min-width: 767px) {
-  .Introduce .text > div {
+  .Introduce .text {
     font-size: 20px;
   }
 }

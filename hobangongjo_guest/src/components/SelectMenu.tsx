@@ -41,7 +41,7 @@ export const SelectMenu = () => {
           className={`tab tab_${selectMenu === "counting" ? "counting" : ""}`}
           onClick={countingTabHandler}
         >
-          간편 상담 신청
+          상담 신청
         </div>
         <div
           className={`tab tab_${
@@ -49,7 +49,7 @@ export const SelectMenu = () => {
           }`}
           onClick={counselListHandler}
         >
-          상담 내역 조회/취소
+          상담 조회
         </div>
       </div>
     </div>

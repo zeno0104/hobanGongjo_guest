@@ -9,7 +9,7 @@
   font-size: 15px;
   color: black;
   font-weight: bold;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 @media screen and (min-width: 415px) and (max-width: 700px) {
   .Counting > section > div {
@@ -27,7 +27,7 @@
   justify-content: center;
   color: grey;
   font-weight: bold;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 @media screen and (min-width: 415px) and (max-width: 700px) {
   .Counting .info > div {
