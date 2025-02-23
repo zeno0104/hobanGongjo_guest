@@ -13,7 +13,7 @@ export const Header = () => {
       </section>
       <section className="info">
         <div className="location_info">
-          <div>강북·도봉·노원·의정부·남양주</div>
+          <div className="region_text">강북·도봉·노원</div>
           <div>새 제품/이전 설치</div>
         </div>
         <div className="info_text">

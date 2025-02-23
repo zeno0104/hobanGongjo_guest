@@ -69,3 +69,9 @@
 .call_info {
   color: grey;
 }
+.region_text {
+  border-bottom-width: 1px;
+  border-bottom-color: #888888;
+  padding-bottom: 3px;
+  text-decoration: underline solid #0f0303;
+}

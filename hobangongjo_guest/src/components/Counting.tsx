@@ -78,26 +78,17 @@ export const Counting = () => {
     setGuestInfo({ ...guestInfo, content: e.target.value });
   };
   const nameRef = useRef<HTMLInputElement>(null);
-  const phoneNumRef = useRef<HTMLInputElement>(null);
-  const regionRef = useRef<HTMLSelectElement>(null);
-  const installTypeRef = useRef<HTMLSelectElement>(null);
-  const installLocRef = useRef<HTMLSelectElement>(null);
-  const typeRef = useRef<HTMLDivElement>(null);
+  const phoneNumberRef = useRef<HTMLInputElement>(null);
+
   const onSubmit = async () => {
     if (!guestInfo.name) {
       nameRef.current?.focus();
+      window.alert("이름 or 상호를 입력해주세요.");
       return;
-    } else if (!guestInfo.phone_number) {
-      phoneNumRef.current?.focus();
-      return;
-    } else if (!guestInfo.region) {
-      regionRef.current?.focus();
-      return;
-    } else if (!guestInfo.installLocation) {
-      installLocRef.current?.focus();
-      return;
-    } else if (guestInfo.type.length === 0) {
-      window.alert("설치하실 기기의 종류를 선택해 주세요.");
+    }
+    if (!guestInfo.phone_number) {
+      phoneNumberRef.current?.focus();
+      window.alert("연락처를 입력해주세요.");
       return;
     }
 
@@ -164,46 +155,30 @@ export const Counting = () => {
             placeholder="ex) 010-1234-5678"
             className="name_input"
             type="text"
-            ref={phoneNumRef}
+            ref={phoneNumberRef}
           />
         </div>
       </section>
       <section className="install_info">
-        <div>
-          중고 or 새제품 설치 <Starlisk />
-        </div>
-        <select
-          className="select"
-          onChange={installTypeHandler}
-          ref={installTypeRef}
-        >
+        <div>새제품 or 이전설치</div>
+        <select className="select" onChange={installTypeHandler}>
           <option value="장소 선택" defaultValue={""}></option>
-          <option value="이전설치">이전설치</option>
           <option value="새제품">새제품</option>
+          <option value="이전설치">이전설치</option>
         </select>
       </section>
       <section className="install_info">
-        <div>
-          지역을 선택해주세요. <Starlisk />
-        </div>
-        <select className="select" onChange={regionHandler} ref={regionRef}>
+        <div>지역을 선택해주세요.</div>
+        <select className="select" onChange={regionHandler}>
           <option value="장소 선택" defaultValue={""}></option>
           <option value="강북">강북</option>
           <option value="도봉">도봉</option>
           <option value="노원">노원</option>
-          <option value="의정부">의정부</option>
-          <option value="남양주">남양주</option>
         </select>
       </section>
       <section className="install_info">
-        <div>
-          설치하실 장소를 선택해주세요. <Starlisk />
-        </div>
-        <select
-          className="select"
-          onChange={installLocationHandler}
-          ref={installLocRef}
-        >
+        <div>설치하실 장소를 선택해주세요.</div>
+        <select className="select" onChange={installLocationHandler}>
           <option value="장소 선택" defaultValue={""}></option>
           <option value="가정집">가정집</option>
           <option value="사무실 / 관공서">사무실 / 관공서</option>
@@ -213,11 +188,8 @@ export const Counting = () => {
           <option value="공장 / 창고 / 물류센터">공장 / 창고 / 물류센터</option>
         </select>
       </section>
-      <section className="type" ref={typeRef}>
-        <div>
-          설치하실 기기의 종류를 선택해 주세요.[중복선택가능]
-          <Starlisk />
-        </div>
+      <section className="type">
+        <div>설치하실 기기의 종류를 선택해 주세요.[중복선택가능]</div>
         <div className="checkBox">
           {airType.map((item) => (
             <div className="checkbox" key={item.id}>

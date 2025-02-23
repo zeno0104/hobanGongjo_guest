@@ -36,7 +36,7 @@ function App() {
     if (selectMenu !== newMenu) {
       setSelectMenu(newMenu);
     }
-    console.log(`selectedMenu = ${selectMenu}`);
+    // console.log(`selectedMenu = ${selectMenu}`);
   }, [location.pathname, selectMenu]); // ✅ selectMenu도 의존성에 추가
 
   return (
