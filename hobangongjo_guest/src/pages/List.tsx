@@ -61,9 +61,9 @@ export const List = () => {
               <div>{index + 1}</div>
               <div>{item.name}</div>
               <div>{item.install_type}</div>
-              <div className="cancelBtn" onClick={() => cancelHandler(item.id)}>
+              {/* <div className="cancelBtn" onClick={() => cancelHandler(item.id)}>
                 취소
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
