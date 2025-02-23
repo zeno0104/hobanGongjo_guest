@@ -141,16 +141,18 @@ export const Counting = () => {
         <div>번거로우신 고객은 010-5169-2715 전화주시면</div>
         <div>빠른 상담이 가능합니다.</div>
       </section>
-      <section className="name">
+      <section className="phone_number">
         <div>
           이름 or 상호 <Starlisk />
         </div>
-        <input
-          onChange={nameHandler}
-          type="text"
-          className="name_input"
-          ref={nameRef}
-        />
+        <div className="number_input">
+          <input
+            onChange={nameHandler}
+            type="text"
+            className="name_input"
+            ref={nameRef}
+          />
+        </div>
       </section>
       <section className="phone_number">
         <div>
@@ -235,7 +237,12 @@ export const Counting = () => {
       </section>
       <section className="counting_content">
         <div>문의 내용</div>
-        <textarea className="counting_content_text" onChange={contentHandler} />
+        <div className="number_input">
+          <textarea
+            className="counting_content_text"
+            onChange={contentHandler}
+          />
+        </div>
       </section>
       <section className="btn">
         <Button text={"예약하기"} type={"POSITIVE"} onClick={onSubmit} />

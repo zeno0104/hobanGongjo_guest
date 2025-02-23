@@ -9,8 +9,8 @@
   font-size: 15px;
   color: black;
   font-weight: bold;
-  /* white-space: nowrap; */
 }
+
 @media screen and (min-width: 415px) and (max-width: 700px) {
   .Counting > section > div {
     font-size: 15px;
@@ -20,6 +20,13 @@
   .Counting > section > div {
     font-size: 30px;
   }
+}
+
+.Counting .name .name_input {
+  width: 99.5%;
+  border: 1px solid rgb(130, 130, 130);
+  border-radius: 5px;
+  height: 35px;
 }
 .Counting .info > div {
   display: flex;
@@ -40,18 +47,12 @@
   }
 }
 
-.Counting .name .name_input {
-  width: 97.7%;
-  border: 1px solid rgb(130, 130, 130);
-  border-radius: 5px;
-  padding: 10px 5px;
-}
 .Counting .install_info > select {
   width: 100%;
   height: 30px;
 }
 .Counting .counting_content .counting_content_text {
-  width: 98.9%;
+  width: 100%;
   min-height: 250px;
   resize: vertical;
   border: 1px solid rgb(130, 130, 130);
@@ -65,7 +66,6 @@
 .Counting .install_info .select {
   border: 1px solid rgb(130, 130, 130);
   border-radius: 5px;
-  padding: 10px 5px;
   height: 50px;
   font-size: 15px;
 }
@@ -79,9 +79,7 @@
   border-radius: 5px;
   padding: 10px 5px;
   flex: 1;
-  /* 입력 필드가 가능한 공간을 차지하도록 설정 */
   min-width: 0;
-  /* 최소 너비를 0으로 설정하여 줄어들 수 있도록 함 */
 }
 
 .checkbox {
