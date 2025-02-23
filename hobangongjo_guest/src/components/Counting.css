@@ -6,7 +6,7 @@
   margin-bottom: 10px;
 }
 .Counting > section > div {
-  font-size: 25px;
+  font-size: 18px;
   color: black;
   font-weight: bold;
 }
@@ -20,7 +20,7 @@
 }
 .Counting .info > div {
   display: flex;
-  font-size: 20px;
+  font-size: 16px;
   justify-content: center;
   color: grey;
   font-weight: bold;
@@ -37,7 +37,7 @@
   resize: vertical;
   border: 1px solid rgb(130, 130, 130);
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .Counting .btn {
   display: flex;
@@ -48,7 +48,7 @@
   border: 1px solid rgb(130, 130, 130);
   border-radius: 5px;
   height: 50px;
-  font-size: 20px;
+  font-size: 16px;
 }
 .Counting .phone_number .number_input {
   display: flex;
@@ -73,5 +73,5 @@
   height: 2rem;
 }
 .name_input {
-  font-size: 18px;
+  font-size: 16px;
 }
