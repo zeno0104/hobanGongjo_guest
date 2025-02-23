@@ -32,7 +32,7 @@
   height: 30px;
 }
 .Counting .counting_content .counting_content_text {
-  width: 100%;
+  width: 99%;
   min-height: 250px;
   resize: vertical;
   border: 1px solid rgb(130, 130, 130);
