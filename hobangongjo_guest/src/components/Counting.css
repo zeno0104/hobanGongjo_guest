@@ -6,20 +6,9 @@
   margin-bottom: 10px;
 }
 .Counting > section > div {
-  font-size: 15px;
+  font-size: 25px;
   color: black;
   font-weight: bold;
-}
-
-@media screen and (min-width: 415px) and (max-width: 700px) {
-  .Counting > section > div {
-    font-size: 15px;
-  }
-}
-@media screen and (min-width: 767px) {
-  .Counting > section > div {
-    font-size: 30px;
-  }
 }
 
 .Counting .name .name_input {
@@ -27,24 +16,15 @@
   border: 1px solid rgb(130, 130, 130);
   border-radius: 5px;
   height: 35px;
+  font-size: 20px;
 }
 .Counting .info > div {
   display: flex;
-  font-size: 15px;
+  font-size: 20px;
   justify-content: center;
   color: grey;
   font-weight: bold;
   /* white-space: nowrap; */
-}
-@media screen and (min-width: 415px) and (max-width: 700px) {
-  .Counting .info > div {
-    font-size: 15px;
-  }
-}
-@media screen and (min-width: 767px) {
-  .Counting .info > div {
-    font-size: 20px;
-  }
 }
 
 .Counting .install_info > select {
@@ -57,6 +37,7 @@
   resize: vertical;
   border: 1px solid rgb(130, 130, 130);
   border-radius: 5px;
+  font-size: 18px;
 }
 .Counting .btn {
   display: flex;
@@ -67,7 +48,7 @@
   border: 1px solid rgb(130, 130, 130);
   border-radius: 5px;
   height: 50px;
-  font-size: 15px;
+  font-size: 20px;
 }
 .Counting .phone_number .number_input {
   display: flex;
@@ -90,4 +71,7 @@
 .checkBoxInput {
   width: 2rem;
   height: 2rem;
+}
+.name_input {
+  font-size: 18px;
 }

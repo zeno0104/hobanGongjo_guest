@@ -162,6 +162,7 @@ export const Counting = () => {
           <input
             onChange={phoneNumberHandler}
             placeholder="ex) 010-1234-5678"
+            className="name_input"
             type="text"
             ref={phoneNumRef}
           />
