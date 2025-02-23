@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import "./List.css";
-import { supabase } from "../../utils/SupabaseClient";
-import { useNavigate } from "react-router-dom";
+// import { supabase } from "../../utils/SupabaseClient";
+// import { useNavigate } from "react-router-dom";
 import { CounselStateContext } from "../App";
 
 interface Data {
@@ -14,7 +14,7 @@ interface Data {
 
 export const List = () => {
   const [list, setList] = useState<Data[]>([]);
-  const nav = useNavigate();
+  // const nav = useNavigate();
 
   useEffect(() => {
     const listValue = localStorage.getItem("counselList");
@@ -27,28 +27,28 @@ export const List = () => {
     throw new Error("CounselStateContext가 정의되지 않았습니다."); // ✅ 예외 처리 추가
   }
 
-  const cancelHandler = async (id: number) => {
-    if (window.confirm("상담을 취소하시겠습니까?")) {
-      const { error } = await supabase.from("guest").delete().eq("id", id);
-      if (error) {
-        console.error(error);
-        return;
-      }
+  // const cancelHandler = async (id: number) => {
+  //   if (window.confirm("상담을 취소하시겠습니까?")) {
+  //     const { error } = await supabase.from("guest").delete().eq("id", id);
+  //     if (error) {
+  //       console.error(error);
+  //       return;
+  //     }
 
-      window.alert("상담을 취소하였습니다.");
+  //     window.alert("상담을 취소하였습니다.");
 
-      const listValue = localStorage.getItem("counselList");
-      if (listValue) {
-        const parsedList: Data[] = JSON.parse(listValue);
-        const filteredData = parsedList.filter((item) => item.id !== id);
-        localStorage.setItem("counselList", JSON.stringify(filteredData));
+  //     const listValue = localStorage.getItem("counselList");
+  //     if (listValue) {
+  //       const parsedList: Data[] = JSON.parse(listValue);
+  //       const filteredData = parsedList.filter((item) => item.id !== id);
+  //       localStorage.setItem("counselList", JSON.stringify(filteredData));
 
-        setList(filteredData);
-      }
+  //       setList(filteredData);
+  //     }
 
-      nav("/", { replace: true });
-    }
-  };
+  //     nav("/", { replace: true });
+  //   }
+  // };
 
   return (
     <div className="List">
