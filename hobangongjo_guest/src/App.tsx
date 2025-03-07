@@ -6,7 +6,7 @@ import { Header } from "./components/Header";
 import { SelectMenu } from "./components/SelectMenu";
 import { createContext, useEffect, useState } from "react";
 import { List } from "./pages/List";
-
+import { Analytics } from "@vercel/analytics/react";
 // Context의 타입 정의
 type CounselStateContextType = {
   selectMenu: string;
@@ -42,6 +42,7 @@ function App() {
   return (
     <CounselStateContext.Provider value={{ selectMenu }}>
       <Header />
+      <Analytics />
       <SelectMenu />
       <Routes>
         <Route path="/" element={<Home />} />
