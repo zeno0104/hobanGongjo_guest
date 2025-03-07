@@ -22,6 +22,9 @@
 # 💻 담당한 기능
 - Guest
     - 상담 신청 기능
+# 🛠️ QR
+<img src="https://github.com/user-attachments/assets/3dc5f7bc-15a6-42c3-a7a2-2e384a2530d7" width ="50%"/>
+
 # 🔥기능
 | 회사소개 | 간편 상담 신청 |
 |---|---|
