@@ -22,9 +22,15 @@
 # 💻 담당한 기능
 - Guest
     - 상담 신청 기능
+# 🛠️ QR
+<img src="https://github.com/user-attachments/assets/3dc5f7bc-15a6-42c3-a7a2-2e384a2530d7" width ="50%"/>
+
 # 🔥기능
 | 회사소개 | 간편 상담 신청 |
 |---|---|
 | <p align="center"><img src="https://github.com/user-attachments/assets/0a97f8d3-2ff5-47f2-8a23-34bcfee57259" width="70%"/></p> | <p align="center"><img src="https://github.com/user-attachments/assets/46840698-b02d-4815-be7d-6e3b58b75c54" width="70%" /></p> |
 | 상담 조회/취소 | 
 | <p align="center"><img src="https://github.com/user-attachments/assets/7f6e29fd-4f76-48a7-a9f5-22353e2de0f2" width="70%"/></p> |
+
+# ⭐추후 개발할 기능 및 특이사항
+- 상담 취소 기능은 설치 완료 기능 완료시 다시 활성화 할 것
