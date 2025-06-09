@@ -116,14 +116,14 @@
 }
 @media (max-width: 768px) {
   .Header .logo .logo_img {
-    width: 40px;
+    width: 70px;
   }
   .Header .logo > div {
     font-size: 20px;
     font-weight: bold;
   }
   .call_img {
-    width: 40px;
+    width: 50px;
   }
   .phone_number_text {
     font-size: 20px;
