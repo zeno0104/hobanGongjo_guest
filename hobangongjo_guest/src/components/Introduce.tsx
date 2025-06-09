@@ -36,10 +36,10 @@ export const Introduce = () => {
             모든 브랜드의 에어컨을 가정, 사무실 상가 어디든!
           </div>
         </div>
-        <div className="end_text">↓ ↓ 지금 바로 문의 주세요! ↓ ↓</div>
-        <div className="btn">
+        <div className="end_text">지금 바로 문의 주세요!</div>
+        {/* <div className="btn">
           <Button text={"예약하기"} type={"COUNSEL"} onClick={btnHandler} />
-        </div>
+        </div> */}
       </div>
     </div>
   );
