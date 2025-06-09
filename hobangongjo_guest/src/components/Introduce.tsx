@@ -1,12 +1,6 @@
-import { useNavigate } from "react-router-dom";
 import "./Introduce.css";
-import { Button } from "./Button";
 
 export const Introduce = () => {
-  const navigate = useNavigate();
-  const btnHandler = () => {
-    navigate("/counsel");
-  };
   return (
     <div className="Introduce">
       <div className="title">당신의 쾌적한 공간을 위한 선택!</div>
