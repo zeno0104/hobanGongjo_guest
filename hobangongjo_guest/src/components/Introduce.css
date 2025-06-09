@@ -1,4 +1,4 @@
-.Introduce {
+/* .Introduce {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -6,15 +6,12 @@
   align-items: center;
   text-align: center;
 }
+
 .Introduce .title {
-  font-size: 20px;
+  font-size: 50px;
   font-weight: bold;
 }
-@media screen and (min-width: 767px) {
-  .Introduce .title {
-    font-size: 25px;
-  }
-}
+
 .Introduce .text {
   display: flex;
   flex-direction: column;
@@ -23,10 +20,45 @@
   color: black;
   font-size: 15px;
   font-weight: 600;
+} */
+/*  */
+.Introduce {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 30px 0px;
+}
+.intro_main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.intro_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
-@media screen and (min-width: 767px) {
-  .Introduce .text {
-    font-size: 20px;
-  }
+.info_text {
+  width: 300px;
+  font-size: 24px;
+}
+.end_text {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+.aircon_img {
+  width: 350px;
+  border-radius: 20px;
+}
+.btn {
+  display: flex;
+  justify-content: center;
 }

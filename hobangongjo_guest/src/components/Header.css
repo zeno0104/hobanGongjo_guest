@@ -1,8 +1,7 @@
-.Header .logo {
+/* .Header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid rgb(236, 236, 236);
 }
 .Header .logo .logo_img {
   width: 100px;
@@ -12,10 +11,6 @@
   font-weight: bold;
 }
 .Header .info {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* justify-content: center; */
   padding: 10px 0px;
 }
 .Header .info img {
@@ -74,4 +69,48 @@
   border-bottom-color: #888888;
   padding-bottom: 3px;
   text-decoration: underline solid #0f0303;
+} */
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+/* Header section */
+.Header .logo {
+  display: flex;
+  align-items: center;
+}
+.Header .logo .logo_img {
+  width: 100px;
+}
+.Header .logo > div {
+  font-size: 30px;
+  font-weight: bold;
+}
+/* info section */
+
+.info_text {
+  display: flex;
+  align-items: center;
+}
+.call_img {
+  width: 100px;
+}
+.call_info_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone_number_text {
+  font-size: 25px;
+}
+.call_info {
+  font-size: 20px;
+  color: rgb(64, 105, 225);
+}
+.p_number {
+  text-decoration: none;
+  color: inherit;
 }

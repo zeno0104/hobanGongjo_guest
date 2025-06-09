@@ -44,7 +44,7 @@ export const SelectMenu = () => {
           className={`tab tab_${selectMenu === "list" ? "counselList" : ""}`}
           onClick={counselListHandler}
         >
-          상담 조회
+          제품 조회
         </div>
       </div>
     </div>

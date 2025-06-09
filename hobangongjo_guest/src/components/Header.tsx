@@ -12,19 +12,19 @@ export const Header = () => {
         <div>호반공조</div>
       </section>
       <section className="info">
-        <div className="location_info">
-          <div className="region_text">강북·도봉·노원</div>
-          <div>새 제품/이전 설치</div>
-        </div>
         <div className="info_text">
-          <div>
-            <img src="./call.jpg" />
+          <div className="call">
+            <img className="call_img" src="./call.jpg" />
           </div>
-          <div>
-            <div className="call_info">누르면 바로 통화 가능↓</div>
-            <a href="tel:01051692715" onClick={handleClick}>
+          <div className="call_info_text">
+            <a
+              href="tel:01051692715"
+              className="p_number"
+              onClick={handleClick}
+            >
               <div className="phone_number_text">010-5169-2715</div>
             </a>
+            <div className="call_info">무료방문 견적신청</div>
           </div>
         </div>
       </section>

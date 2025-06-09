@@ -218,7 +218,7 @@ export const Counting = () => {
         </div>
       </section>
       <section className="btn">
-        <Button text={"예약하기"} type={"POSITIVE"} onClick={onSubmit} />
+        <Button text={"예약하기"} type={"COUNSEL"} onClick={onSubmit} />
       </section>
     </div>
   );

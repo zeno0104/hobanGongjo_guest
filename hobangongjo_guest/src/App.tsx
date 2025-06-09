@@ -11,7 +11,6 @@ import { Analytics } from "@vercel/analytics/react";
 type CounselStateContextType = {
   selectMenu: string;
 };
-
 // Context 생성
 export const CounselStateContext = createContext<
   CounselStateContextType | undefined
