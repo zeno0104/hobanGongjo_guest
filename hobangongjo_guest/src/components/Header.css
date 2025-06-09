@@ -114,3 +114,22 @@
   text-decoration: none;
   color: inherit;
 }
+@media (max-width: 768px) {
+  .Header .logo .logo_img {
+    width: 30px;
+  }
+  .Header .logo > div {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .call_img {
+    width: 30px;
+  }
+  .phone_number_text {
+    font-size: 15px;
+  }
+  .call_info {
+    font-size: 15px;
+    color: rgb(64, 105, 225);
+  }
+}
